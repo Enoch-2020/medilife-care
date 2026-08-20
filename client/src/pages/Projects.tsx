@@ -1,0 +1,8 @@
+/**
+ * Northline Build Co. design reminder: Forge & Form — projects behave like a visual field ledger, with project codes, material contrast, and direct scope context.
+ */
+import { ArrowUpRight, MapPin } from "lucide-react";
+import PageHero from "../components/PageHero";
+import { projects } from "../data";
+
+export default function Projects() { return <><PageHero section="Projects" title="Built work. Clear evidence." copy="A selection of Northline projects shows the range of work we take on and the site discipline we bring to every scope."/><section className="project-page"><div className="container"><div className="project-page-head"><span className="section-code">SELECTED WORK / WEST COAST</span><p>Commercial environments, homes, and complex construction details where the build itself is the proof.</p></div><div className="project-page-grid">{projects.map((project,index)=><article className={`project-page-card card-${index+1}`} key={project.code}><div className="project-page-image"><img src={project.image} alt={project.title}/><span>{project.code}</span></div><div className="project-page-content"><p>{project.type}</p><h2>{project.title}</h2><div><span><MapPin size={15}/>{project.city}</span><a href="#project" aria-label={`View ${project.title}`}><ArrowUpRight size={19}/></a></div></div></article>)}</div></div></section><section className="project-approach"><div className="container"><div><span className="section-code amber">PROJECT PRINCIPLE</span><h2>Every site is its<br/>own system.</h2></div><p>Our role is to understand the system quickly: the existing conditions, the people in the room, the work that must happen first, and the decisions that can wait. That is where construction gets clearer.</p></div></section></>; }

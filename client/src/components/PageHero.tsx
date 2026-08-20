@@ -1,37 +1,18 @@
 /**
- * MediLife Care design reminder: Clinical Horizon — editorial left-weighted mastheads with an airy, high-key clinical field and decisive blue accent.
+ * Northline Build Co. design reminder: Forge & Form — each inner masthead needs a unique site-status signal and beam-line ribbon, never a generic repeated banner.
  */
 import { Link } from "wouter";
-import { ArrowRight, CalendarDays, ChevronRight, HeartPulse, MapPin, Stethoscope, UserRoundCheck } from "lucide-react";
+import { ArrowUpRight, BriefcaseBusiness, ChevronRight, ClipboardList, HardHat, MapPinned, MessagesSquare } from "lucide-react";
 
-const heroSignals = {
-  "About MediLife": { icon: HeartPulse, overline: "OUR CARE STANDARD", title: "Listen. Connect. Guide.", detail: "A shared care plan begins with your whole story.", step: "Care path 01", tone: "about" },
-  "Care services": { icon: Stethoscope, overline: "SPECIALTY NAVIGATION", title: "Find the right door.", detail: "Six connected departments, one clearer direction.", step: "Care path 02", tone: "services" },
-  "Our doctors": { icon: UserRoundCheck, overline: "YOUR CLINICAL TEAM", title: "Expertise, made personal.", detail: "Meet clinicians who carry context forward.", step: "Care path 03", tone: "doctors" },
-  "Book a visit": { icon: CalendarDays, overline: "VISIT PLANNING", title: "A time that works.", detail: "A coordinator helps confirm the right next step.", step: "Care path 04", tone: "appointment" },
-  "Contact MediLife": { icon: MapPin, overline: "CARE SUPPORT", title: "Start with a person.", detail: "Questions, directions, and next steps — all in one call.", step: "Care path 05", tone: "contact" },
+const signals = {
+  About: { icon: BriefcaseBusiness, tag: "COMPANY PROFILE", headline: "A partner built for the work.", note: "27 years of field discipline, from a first walk-through to final closeout.", code: "N / 01", tone: "about" },
+  Capabilities: { icon: ClipboardList, tag: "SCOPE DIRECTORY", headline: "One team. Clear accountability.", note: "The right construction path depends on the work in front of you.", code: "N / 02", tone: "capabilities" },
+  Projects: { icon: MapPinned, tag: "PROJECT LEDGER", headline: "Work you can walk through.", note: "Selected projects across commercial, residential, and complex occupied sites.", code: "N / 03", tone: "projects" },
+  Contact: { icon: MessagesSquare, tag: "PRE-BUILD CONVERSATION", headline: "Start with a practical question.", note: "We will point you toward the clearest next step for your project.", code: "N / 04", tone: "contact" },
+  "Request a quote": { icon: HardHat, tag: "NEW PROJECT INTAKE", headline: "Start with the facts on site.", note: "Share the scope and our preconstruction team will follow up directly.", code: "N / 05", tone: "quote" },
 };
 
-export default function PageHero({ eyebrow, title, description, action = "Book an appointment" }: { eyebrow: string; title: string; description: string; action?: string }) {
-  const signal = heroSignals[eyebrow as keyof typeof heroSignals];
-  const SignalIcon = signal.icon;
-  return (
-    <section className="page-hero">
-      <div className="page-hero-grid" aria-hidden="true"><span /><span /><span /><span /></div>
-      <div className="container page-hero-content">
-        <div className="breadcrumb"><Link href="/">Home</Link><ChevronRight size={14} /><span>{eyebrow}</span></div>
-        <span className="eyebrow">{eyebrow}</span>
-        <h1>{title}</h1>
-        <p>{description}</p>
-        <Link href="/appointment" className="btn btn-primary">{action} <ArrowRight size={18} /></Link>
-      </div>
-      <aside className={`hero-signal ${signal.tone}`} aria-label={signal.overline}>
-        <div className="signal-topline"><SignalIcon size={20}/><span>{signal.overline}</span></div>
-        <h2>{signal.title}</h2>
-        <p>{signal.detail}</p>
-        <div className="signal-pulse"><i /><i /><i /><i /><b>{signal.step}</b></div>
-      </aside>
-      <div className="page-care-ribbon"><span className="ribbon-cross">+</span><strong>{signal.step}</strong><i /><span>{signal.overline}</span><i /><span>{signal.detail}</span></div>
-    </section>
-  );
+export default function PageHero({ section, title, copy }: { section: keyof typeof signals; title: string; copy: string }) {
+  const signal = signals[section]; const Icon = signal.icon;
+  return <section className="page-hero"><div className="page-hero-grid" aria-hidden="true"><i/><i/><i/></div><div className="container page-hero-copy"><div className="breadcrumbs"><Link href="/">Home</Link><ChevronRight size={13}/><span>{section}</span></div><span className="section-code">{section}</span><h1>{title}</h1><p>{copy}</p><Link href="/quote" className="button button-amber">Start a conversation <ArrowUpRight size={18}/></Link></div><aside className={`site-signal ${signal.tone}`}><div><Icon size={20}/><span>{signal.tag}</span></div><h2>{signal.headline}</h2><p>{signal.note}</p><footer><b>{signal.code}</b><i/><i/><i/><small>NORTHLINE BUILD CO.</small></footer></aside><div className="masthead-ribbon"><span className="notch">↗</span><b>{signal.code}</b><i/><span>{signal.tag}</span><i/><span>{signal.note}</span></div></section>;
 }

@@ -1,16 +1,22 @@
 /**
- * MediLife Care design reminder: Clinical Horizon — build trust through editorial clarity, concise facts, and a protected soft-blue image frame.
+ * Northline Build Co. design reminder: Forge & Form — company proof should be grounded in field discipline, not generic construction claims.
  */
-import { CheckCircle2, HeartHandshake, ShieldCheck, Sparkles } from "lucide-react";
+import { Check, HardHat, ShieldCheck, SquareStack } from "lucide-react";
 import PageHero from "../components/PageHero";
+import { stats } from "../data";
 
-const teamImage = "/manus-storage/medilife-clinicians_c7165928.jpg";
+const craftImage = "/manus-storage/northline-craft-detail_fc295bf8.jpg";
 const values = [
-  { icon: ShieldCheck, title: "Be precise", text: "We explain what we know, what comes next, and how each decision supports your health." },
-  { icon: HeartHandshake, title: "Be present", text: "We create room for questions, concerns, and the context that makes your health unique." },
-  { icon: Sparkles, title: "Keep improving", text: "We use better systems, better evidence, and thoughtful feedback to make care easier to navigate." },
+  { icon: SquareStack, title: "Coordinate the whole", copy: "We bring the moving parts together so decisions travel cleanly from document to field." },
+  { icon: ShieldCheck, title: "Protect the work", copy: "We build quality controls into the sequence instead of saving them for the finish." },
+  { icon: HardHat, title: "Lead from site", copy: "Our project leaders stay close to the daily work, trade partners, and owner decisions." },
 ];
 
 export default function About() {
-  return <><PageHero eyebrow="About MediLife" title="Healthcare that sees the whole person." description="We built MediLife Care around a simple belief: patients deserve expert medicine, plain-language guidance, and a team that stays connected." /><section className="section about-story"><div className="container about-grid"><div><span className="eyebrow">OUR PURPOSE</span><h2>Bring more ease to every health decision.</h2><p className="lead">MediLife Care is an integrated health center for people who want care to feel more informed, coordinated, and human.</p><p>From first questions to follow-up, our specialists and care coordinators share a single view of your needs. That means less repeating, fewer loose ends, and a clearer plan when it matters.</p><div className="check-list"><p><CheckCircle2 /> Specialists who collaborate across care areas</p><p><CheckCircle2 /> Clear information before, during, and after your visit</p><p><CheckCircle2 /> Flexible pathways for in-person and virtual support</p></div></div><div className="about-image"><div className="photo-offset" /><img src={teamImage} alt="MediLife clinicians collaborating" /><div className="image-stat"><strong>ONE TEAM</strong><span>many care<br />perspectives</span></div></div></div></section><section className="values-section"><div className="container"><div className="section-heading split-heading"><div><span className="eyebrow">WHAT GUIDES US</span><h2>Care you can feel confident in.</h2></div><p>Our model holds clinical excellence and human attention to the same high standard.</p></div><div className="row g-4">{values.map((value, i) => { const Icon = value.icon; return <div className="col-md-4" key={value.title}><article className="value-card"><span><Icon size={26}/></span><h3>{value.title}</h3><p>{value.text}</p><b>0{i + 1}</b></article></div>; })}</div></div></section></>;
+  return <>
+    <PageHero section="About" title="The build only works when the team does." copy="Northline was founded on a simple rule: solve the hard parts early, lead the site directly, and stay accountable to the last detail."/>
+    <section className="about-stance"><div className="container stance-grid"><div><span className="section-code">OUR STANCE / BUILT ON SITE</span><h2>Practical leadership.<br/>No loose ends.</h2><p className="large-copy">We bring owners, architects, consultants, and trade partners into a working construction plan — then keep that plan visible as the work moves.</p><div className="principle-list"><p><Check size={17}/> <strong>Own the sequence.</strong> A build moves better when someone holds the whole line.</p><p><Check size={17}/> <strong>Surface the facts.</strong> We manage issues early and communicate in plain sight.</p><p><Check size={17}/> <strong>Protect the standard.</strong> Detail, safety, and handoff matter all the way through.</p></div></div><div className="stance-image"><div className="amber-beam"/><img src={craftImage} alt="Timber and steel construction detail"/><div className="image-stamp"><HardHat size={19}/><span>FIELD-LED<br/><b>CONSTRUCTION</b></span></div></div></div></section>
+    <section className="about-stats"><div className="container">{stats.map(stat=><div key={stat.label}><strong>{stat.value}</strong><span>{stat.label}</span></div>)}</div></section>
+    <section className="values-grid"><div className="container"><div className="section-header-line"><span className="section-code">WHAT WE HOLD TO</span><h2>Standards that stay<br/>on the job.</h2></div><div className="row g-3">{values.map((value,index)=>{const Icon=value.icon; return <div className="col-md-4" key={value.title}><article className="value-block"><span>0{index+1}</span><Icon size={28}/><h3>{value.title}</h3><p>{value.copy}</p></article></div>})}</div></div></section>
+  </>;
 }

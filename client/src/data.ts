@@ -1,20 +1,26 @@
 /**
- * MediLife Care design reminder: Clinical Horizon — clear pathways, precise service language, and people-first care information.
+ * Northline Build Co. design reminder: Forge & Form — direct, material-led construction content with clear scope, field-report proof, and decisive next steps.
  */
-import { Activity, Baby, BrainCircuit, HeartPulse, ScanLine, Stethoscope } from "lucide-react";
+import { Building2, HardHat, Hammer, LandPlot, Ruler, ShieldCheck } from "lucide-react";
 
-export const services = [
-  { icon: HeartPulse, name: "Cardiology", short: "Heart care that starts with listening.", detail: "Prevention, diagnostics, and personalized cardiac treatment coordinated around your life." },
-  { icon: BrainCircuit, name: "Neurology", short: "Specialist support for the nervous system.", detail: "Thoughtful assessment and ongoing care for conditions affecting the brain, spine, and nerves." },
-  { icon: ScanLine, name: "Diagnostics", short: "Answers with less waiting.", detail: "Imaging, lab work, and screenings delivered through a comfortable, connected experience." },
-  { icon: Baby, name: "Women’s health", short: "Care that changes with you.", detail: "Preventive, reproductive, and menopause care from clinicians who take the whole picture seriously." },
-  { icon: Activity, name: "Orthopedics", short: "Move with more confidence.", detail: "Sports injury, joint, and mobility care that helps you return to the things you love." },
-  { icon: Stethoscope, name: "Primary care", short: "Your dependable first call.", detail: "Everyday preventive care and long-term health guidance for individuals and families." },
+export const projects = [
+  { code: "NL-24.17", type: "Commercial / Waterfront", title: "Harbor Works", city: "San Francisco, CA", image: "/manus-storage/northline-project-harbor_0084ffc6.jpg" },
+  { code: "NL-23.08", type: "Residential / Ground-up", title: "Cedar Ridge House", city: "Mill Valley, CA", image: "/manus-storage/northline-project-residence_71393a49.jpg" },
+  { code: "NL-24.03", type: "Craft / Structural", title: "Oakline Detail", city: "Berkeley, CA", image: "/manus-storage/northline-craft-detail_fc295bf8.jpg" },
 ];
 
-export const doctors = [
-  { initials: "AR", name: "Dr. Amina Rahman", specialty: "Cardiology", focus: "Preventive heart health & imaging", tone: "blue", portrait: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=82" },
-  { initials: "JW", name: "Dr. Jordan Wells", specialty: "Primary care", focus: "Family medicine & care planning", tone: "sand", portrait: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=900&q=82" },
-  { initials: "MC", name: "Dr. Mateo Chen", specialty: "Neurology", focus: "Headache, movement & memory care", tone: "teal", portrait: "/manus-storage/medilife-dr-mateo_e39e82f1.jpg" },
-  { initials: "NS", name: "Dr. Nia Shah", specialty: "Women’s health", focus: "Lifelong gynecologic care", tone: "lavender", portrait: "https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=900&q=82" },
+export const capabilities = [
+  { code: "01", icon: Building2, title: "Preconstruction", copy: "Clear budgets, early trade input, and a buildable plan before the first crew arrives." },
+  { code: "02", icon: HardHat, title: "General contracting", copy: "Hands-on site leadership, rigorously managed schedules, and a team accountable to the work." },
+  { code: "03", icon: Ruler, title: "Design-build", copy: "One integrated path from early concept through handoff, built to shorten decisions and reduce friction." },
+  { code: "04", icon: Hammer, title: "Renovation & retrofit", copy: "Complex occupied-site work delivered with practical staging, careful protection, and minimal disruption." },
+  { code: "05", icon: LandPlot, title: "Site & infrastructure", copy: "Groundwork, concrete, utilities, and the operational details that let a project stand its ground." },
+  { code: "06", icon: ShieldCheck, title: "Quality & safety", copy: "Documented checkpoints and field-ready safety processes that keep craftsmanship and people protected." },
+];
+
+export const stats = [
+  { value: "27", label: "years building" },
+  { value: "184", label: "projects delivered" },
+  { value: "92%", label: "repeat partners" },
+  { value: "14", label: "active sites" },
 ];

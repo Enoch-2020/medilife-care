@@ -1,22 +1,10 @@
 /**
- * MediLife Care design reminder: Clinical Horizon — a calm, white-and-sapphire healthcare system with precise geometry and human warmth.
+ * Northline Build Co. design reminder: Forge & Form — the logo is an amber-notched structural beam mark, never a generic house icon.
  */
 import { Link } from "wouter";
 
-const LOGO_URL = "/manus-storage/medilife-pulse-cross_8a70edd2.png";
+export const LOGO_URL = "/manus-storage/northline-mark_445e2ace.png";
 
-export function BrandMark({ compact = false }: { compact?: boolean }) {
-  return (
-    <Link href="/" className="brand-mark" aria-label="MediLife Care home">
-      <img src={LOGO_URL} alt="MediLife Care pulse cross" className="brand-logo-image" />
-      {!compact && (
-        <span className="brand-type">
-          <strong>MediLife</strong>
-          <small>CARE CENTER</small>
-        </span>
-      )}
-    </Link>
-  );
+export default function BrandMark({ inverted = false }: { inverted?: boolean }) {
+  return <Link href="/" className={`northline-brand ${inverted ? "is-inverted" : ""}`} aria-label="Northline Build Co. home"><img src={LOGO_URL} alt="Northline structural beam mark"/><span><strong>NORTHLINE</strong><small>BUILD CO.</small></span></Link>;
 }
-
-export { LOGO_URL };

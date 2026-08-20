@@ -1,63 +1,18 @@
 /**
- * MediLife Care design reminder: Clinical Horizon — high-key architectural hero, low clinical noise, and a layered ribbon guiding visitors from assurance to action.
+ * Northline Build Co. design reminder: Forge & Form — lead with a dark site field, a human superintendent photo, field-report proof, and an offset project ledger.
  */
 import { Link } from "wouter";
-import { ArrowRight, CalendarCheck2, Clock3, HeartHandshake, ShieldCheck, Stethoscope, UserRoundCheck } from "lucide-react";
-import { doctors, services } from "../data";
+import { ArrowRight, ArrowUpRight, Check, ClipboardCheck, HardHat, ShieldCheck } from "lucide-react";
+import { capabilities, projects, stats } from "../data";
 
-const heroImage = "/manus-storage/medilife-hero-hospital_57873805.jpg";
-const clinicianImage = "/manus-storage/medilife-clinicians_c7165928.jpg";
+const heroImage = "/manus-storage/northline-hero-site_3f15fb4b.jpg";
 
-export default function Home() {
-  return (
-    <>
-      <section className="hero-section">
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <span className="eyebrow"><span className="pulse-dot" /> WELCOME TO MEDILIFE CARE</span>
-            <h1>Expert care.<br /><em>Every time.</em></h1>
-            <p>Compassionate care, advanced technology, and specialists who make the next step feel simpler.</p>
-            <div className="hero-actions"><Link href="/appointment" className="btn btn-primary">Book an appointment <ArrowRight size={18} /></Link><Link href="/services" className="text-link">Explore services <ArrowRight size={17} /></Link></div>
-            <div className="hero-proof"><ShieldCheck size={21} /><span><strong>Care with clarity</strong><br />Specialists, diagnostics, and support in one connected center.</span></div>
-          </div>
-          <div className="hero-visual">
-            <div className="visual-frame" />
-            <img src={heroImage} alt="Modern MediLife Care medical center" />
-            <div className="hero-float-card"><span>NEW PATIENTS</span><strong>Start with a<br />care consultation.</strong><Link href="/appointment">Find a time <ArrowRight size={15} /></Link></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="care-strip-section">
-        <div className="container care-strip">
-          <div className="care-strip-item"><span className="care-icon"><CalendarCheck2 size={23} /></span><div><strong>Simple scheduling</strong><p>Choose an in-person or virtual visit.</p></div></div>
-          <div className="care-strip-item"><span className="care-icon"><UserRoundCheck size={23} /></span><div><strong>Experienced specialists</strong><p>Guidance shaped around your needs.</p></div></div>
-          <div className="care-strip-item"><span className="care-icon"><HeartHandshake size={23} /></span><div><strong>Coordinated support</strong><p>One team, a clearer way forward.</p></div></div>
-          <Link href="/contact" className="care-strip-call">Need help finding care?<br /><strong>Talk with us <ArrowRight size={16} /></strong></Link>
-        </div>
-      </section>
-
-      <section className="section services-preview">
-        <div className="container">
-          <div className="section-heading split-heading"><div><span className="eyebrow">CARE FOR YOUR WHOLE HEALTH</span><h2>One trusted place<br />for every need.</h2></div><p>Find specialist care, everyday health support, and diagnostic services designed to work together — not in silos.</p></div>
-          <div className="row g-3 service-card-grid">
-            {services.slice(0, 6).map((service, index) => { const Icon = service.icon; return <div className="col-md-6 col-xl-4" key={service.name}><Link href="/services" className="service-card"><span className={`service-number n-${index + 1}`}>0{index + 1}</span><Icon size={29} strokeWidth={1.8} /><h3>{service.name}</h3><p>{service.short}</p><span className="service-arrow"><ArrowRight size={18} /></span></Link></div>; })}
-          </div>
-        </div>
-      </section>
-
-      <section className="care-story-section">
-        <div className="container care-story-grid">
-          <div className="care-photo"><div className="photo-offset" /><img src={clinicianImage} alt="Two clinicians in a welcoming consultation space" /><div className="photo-label"><Stethoscope size={19} /> <span>CARE TEAMS<br /><strong>WHO CONNECT THE DOTS</strong></span></div></div>
-          <div className="care-story-copy"><span className="eyebrow">A DIFFERENT KIND OF MEDICAL CENTER</span><h2>Healing hands.<br />Clearer plans.</h2><p>Great care is more than clinical expertise. It is being heard, knowing what happens next, and having the right people in your corner.</p><div className="care-stats"><div><strong>20+</strong><span>specialists<br />on one team</span></div><div><strong>15k</strong><span>annual visits<br />coordinated</span></div><div><strong>6</strong><span>integrated care<br />departments</span></div></div><Link href="/about" className="text-link">How our care works <ArrowRight size={17} /></Link></div>
-        </div>
-      </section>
-
-      <section className="section doctors-section">
-        <div className="container"><div className="section-heading centered-heading"><span className="eyebrow">THE PEOPLE BEHIND THE CARE</span><h2>Meet a team that makes time.</h2><p>Our clinicians pair deep expertise with the kind of attention that turns questions into a plan.</p></div><div className="row g-3 doctor-grid">{doctors.map((doctor) => <div className="col-sm-6 col-xl-3" key={doctor.name}><Link href="/doctors" className="doctor-card"><div className={`doctor-avatar ${doctor.tone}`}><img src={doctor.portrait} alt={`${doctor.name}, ${doctor.specialty}`}/><span>{doctor.initials}</span></div><small>{doctor.specialty}</small><h3>{doctor.name}</h3><p>{doctor.focus}</p><span className="doctor-link">View profile <ArrowRight size={16} /></span></Link></div>)}</div><div className="center-action"><Link href="/doctors" className="btn btn-outline-primary">Meet all doctors <ArrowRight size={17} /></Link></div></div>
-      </section>
-
-      <section className="home-appointment"><div className="container appointment-inner"><div><span className="eyebrow light">MAKE A MOVE FOR YOUR HEALTH</span><h2>Ready when you are.</h2><p>Book a visit online, or call to speak with someone who can guide you to the right care.</p></div><div className="appointment-actions"><Link href="/appointment" className="btn btn-light">Book an appointment <ArrowRight size={18} /></Link><a href="tel:+15550184422"><Clock3 size={19} /> Call (555) 018-4422</a></div></div></section>
-    </>
-  );
-}
+export default function Home() { return <>
+  <section className="home-hero"><img src={heroImage} alt="Northline superintendent at an active commercial construction site"/><div className="hero-scrim"/><div className="container home-hero-content"><span className="section-code amber">NORTHLINE / BUILD CO.</span><h1>Built to<br/><em>hold its line.</em></h1><p>Complex construction, clearly led. Northline brings preconstruction, field execution, and accountable handoff under one disciplined team.</p><div className="hero-actions"><Link href="/quote" className="button button-amber">Start a project <ArrowUpRight size={18}/></Link><Link href="/projects" className="line-link">See our work <ArrowRight size={17}/></Link></div></div><div className="hero-site-card"><span>ACTIVE SITE / 14</span><strong>Clarity in the field.<br/>Control in the build.</strong><div><HardHat size={18}/><small>Commercial, residential<br/>& occupied-site work</small></div></div><div className="hero-bottom-rule"><span>SCROLL TO EXPLORE</span><i/><span>WEST COAST / SINCE 1999</span></div></section>
+  <section className="stats-strip"><div className="container">{stats.map(stat => <div key={stat.label}><strong>{stat.value}</strong><span>{stat.label}</span></div>)}<Link href="/about">Our field record <ArrowUpRight size={17}/></Link></div></section>
+  <section className="intro-section"><div className="container intro-grid"><div><span className="section-code">WHAT WE BUILD / WHY IT HOLDS</span><h2>A better way to<br/>run the work.</h2></div><div className="intro-copy"><p>Northline is a construction partner for owners who expect their project to be built with sharp thinking, steady field leadership, and a real command of the details.</p><div className="check-rows"><span><Check size={17}/> Early facts, before assumptions.</span><span><Check size={17}/> A site team that stays accountable.</span><span><Check size={17}/> Decisions tracked to the work.</span></div><Link href="/about" className="line-link">Meet Northline <ArrowRight size={17}/></Link></div></div></section>
+  <section className="capabilities-section"><div className="container"><div className="section-heading-dark"><span className="section-code amber">CAPABILITIES / 06</span><h2>Scope, aligned<br/>from day one.</h2><p>The right sequence, the right specialists, and a clear owner point of view through every phase.</p></div><div className="capability-list">{capabilities.map(item=>{const Icon=item.icon;return <Link href="/services" className="capability-row" key={item.title}><span>{item.code}</span><Icon size={28}/><h3>{item.title}</h3><p>{item.copy}</p><ArrowUpRight size={19}/></Link>})}</div></div></section>
+  <section className="projects-section"><div className="container"><div className="projects-header"><div><span className="section-code">PROJECT LEDGER / SELECTED</span><h2>Work with<br/>a point of view.</h2></div><Link href="/projects" className="button button-outline">View all projects <ArrowUpRight size={18}/></Link></div><div className="project-ledger">{projects.map((project,index)=><Link href="/projects" className={`project-tile tile-${index+1}`} key={project.code}><img src={project.image} alt={project.title}/><div className="project-overlay"/><div className="project-meta"><span>{project.code}</span><span>{project.type}</span></div><div className="project-title"><h3>{project.title}</h3><p>{project.city}</p></div><span className="project-arrow"><ArrowUpRight size={18}/></span></Link>)}</div></div></section>
+  <section className="process-band"><div className="container process-grid"><div><span className="section-code amber">HOW WE OPERATE</span><h2>Field-tested<br/>from the start.</h2></div><div className="process-steps"><article><span>01</span><h3>See the site</h3><p>We establish existing conditions, constraints, and the decisions that shape the work.</p></article><article><span>02</span><h3>Set the sequence</h3><p>Budget, schedule, procurement, and trade input align before construction pressure builds.</p></article><article><span>03</span><h3>Build with control</h3><p>Field reporting and practical leadership keep scope, quality, and handoff moving together.</p></article></div></div></section>
+  <section className="home-contact"><div className="container"><div><ClipboardCheck size={31}/><span className="section-code">LOOKING AT A NEW SITE?</span><h2>Let’s map the<br/>next move.</h2></div><p>Send a short project brief, request a walk-through, or call us direct. We’ll start with the facts and build from there.</p><Link href="/quote" className="button button-dark">Request a quote <ArrowUpRight size={18}/></Link></div></section>
+</>; }

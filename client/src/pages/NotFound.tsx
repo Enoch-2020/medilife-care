@@ -1,7 +1,4 @@
-/**
- * MediLife Care design reminder: Clinical Horizon — even exception states remain calm, clear, and oriented toward a useful next step.
- */
+/** Northline Build Co. design reminder: Forge & Form — errors still guide visitors back to a useful construction path. */
 import { Link } from "wouter";
-import { ArrowRight } from "lucide-react";
-
-export default function NotFound() { return <section className="not-found"><span className="eyebrow">PAGE NOT FOUND</span><h1>Let’s get you back to care.</h1><p>The page you are looking for is no longer here or may have moved.</p><Link href="/" className="btn btn-primary">Return home <ArrowRight size={18}/></Link></section>; }
+import { ArrowUpRight } from "lucide-react";
+export default function NotFound(){return <section className="not-found"><span className="section-code amber">PAGE NOT FOUND</span><h1>This route is<br/>off the plan.</h1><p>Let’s return you to the project board.</p><Link href="/" className="button button-amber">Back to Northline <ArrowUpRight size={18}/></Link></section>}

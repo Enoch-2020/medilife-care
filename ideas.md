@@ -1,90 +1,82 @@
-# MediLife Care — Design Directions
+# Northline Build Co. — Construction Website Directions
 
-## Approach 1 — Clinical Horizon
+## Approach 1 — Forge & Form
 
-**Very Brief Intro:** A serene, high-trust healthcare experience built around airy white space, sapphire-blue structure, and reassuring photographic moments. It adapts the Pinterest reference's clear hierarchy and polished hospital feel for an approachable modern care brand.
+**Very Brief Intro:** A confident construction identity shaped by high-contrast graphite fields, safety-amber signals, large project photography, and tightly composed editorial typography. It translates the reference’s dark project-led energy into a more contemporary, architectural experience.
 
-**Probability:** 0.07
+**Probability:** 0.06
 
-## Approach 2 — Warm Continuum
+## Approach 2 — Field Ledger
 
-**Very Brief Intro:** A more human, editorial healthcare direction with soft sand tones, compassionate close-cropped portraits, and a gentle rhythm. It would feel like a premium family clinic journal rather than a hospital portal.
+**Very Brief Intro:** A warmer, materials-first direction inspired by a foreman’s site notebook, with parchment pages, stamped labels, rough paper textures, and muted oxide-red actions. It would feel grounded, craft-led, and locally established.
 
-**Probability:** 0.04
+**Probability:** 0.03
 
-## Approach 3 — Precision Atlas
+## Approach 3 — Concrete Index
 
-**Very Brief Intro:** A technical, high-contrast medical platform with graphite panels, data-inspired geometry, and a cooler clinical atmosphere. This option would emphasize advanced care and specialized diagnostics.
+**Very Brief Intro:** A cool, gallery-like construction portfolio with pale concrete surfaces, black technical labels, blueprint grids, and spare blue highlights. It would feel more like an architecture studio archive than a general contractor website.
 
-**Probability:** 0.09
+**Probability:** 0.08
 
 ---
 
-# Chosen Direction — Clinical Horizon
-
-> **Ground-truth reference:** The supplied Pinterest pin establishes the intended direction: an orderly white and blue hospital website with a strong hero message, a large medical-building visual, quick-care highlights, service categories, doctor imagery, an appointment call-to-action, and a structured deep-blue footer. This implementation preserves those design cues while using original content and custom visual assets.
+# Chosen Direction — Forge & Form
 
 ## Design Movement
 
-**Contemporary clinical editorialism.** The interface blends the clarity of a hospital wayfinding system with the softness of premium healthcare publishing. Clean architectural lines, blue medical accents, deliberate information bands, and a white-field layout communicate credibility without feeling cold.
+**Contemporary industrial editorialism.** This direction combines the assertive scale of late-modern construction signage with the ordered editorial logic of architectural monographs. The result is direct and premium, rather than generic corporate contracting.
 
 ## Core Principles
 
-1. **Reassurance before decoration:** Every visual decision should reinforce confidence, ease, and legibility.
-2. **Layered care pathway:** The homepage moves from urgent confidence, to care choices, to proof of expertise, to appointment action.
-3. **Architectural composure:** Use large, calm blocks of space and an offset hero composition rather than generic centered sections.
-4. **Human proof points:** Pair clinical blue structure with honest, warm care imagery and direct service language.
+1. **Build in public:** Use project photography, progress signals, and concrete proof points to establish credibility visibly.
+2. **Directional contrast:** Deep graphite fields, safety amber action points, and warm off-white text areas define a clear visual path.
+3. **Architectural tension:** Apply offset columns, linework, cropped photography, and disciplined negative space instead of centred marketing blocks.
+4. **Practical confidence:** Keep every statement specific, every action direct, and every process step easy to follow.
 
 ## Color Philosophy
 
-The visual system begins with crisp cloud white to echo clinical cleanliness, then introduces deep **MediLife Blue** as the stable signal of trust and interaction. A pale blue mist adds softness without resorting to gradients, while a restrained fresh-teal accent highlights health, arrival, and care continuity. Navy is reserved for anchoring the footer and stronger statements. The image reference is light-key, so all image-overlaid content must use dark ink or be placed in a protected surface.
+Graphite black represents structure, discipline, and the working site. **Northline Amber** provides a singular safety-inspired call to action and project-marker color, cutting through dark and warm-white surfaces without relying on gradients. Concrete white provides relief, while muted steel blue is used only for technical annotations and linework.
 
 ## Layout Paradigm
 
-The homepage is built as a **care ribbon**: a thin operational top bar, a precise main navigation band, an asymmetrical two-column hero, a floating appointment card, and alternating horizontal service ecosystems. Inner pages use a left-weighted editorial masthead with a narrow clinical information rail or action card, rather than relying on a single centralized content stack.
+The home page follows a **site sequence**: an operational utility bar, a heavy navigation beam, a split hero with a tall image slab, proof tiles arranged as a field report, an offset project ledger, a process ribbon, and a clear quote form. Inner pages keep the left-weighted editorial masthead but pair it with a page-specific site-status card or image crop.
 
 ## Signature Elements
 
-1. **Pulse-line mark:** A compact four-point medical cross with a continuous pulse cut-through, used for the logo, favicon, and small information markers.
-2. **Care strip:** A low, full-width band of concise support cards that bridges major content sections.
-3. **Soft diagnostic frame:** A pale-blue, offset corner frame around significant images, suggesting a medical scan window without overusing cards.
+1. **Northline notch:** A solid amber angle sliced into key cards, buttons, and section counters.
+2. **Site ledger:** Small uppercase rows, project codes, and horizontal rules that make information feel operational.
+3. **Beam line:** A fine steel-blue or amber rule used as a structural guide across headings and next-step bands.
 
 ## Interaction Philosophy
 
-Interactions should make care feel navigable and immediate. Navigation links show a precise blue underline, service cards lift by a few pixels and reveal an arrow, appointment choices respond with clear selection states, and form submission provides a direct, human confirmation. No interaction should be playful at the expense of confidence.
+Interactions should feel decisive and tactile. Buttons shift forward a few pixels, cards reveal their project code, and navigation marks the active page with a bright amber beam. Quote forms clearly indicate their selected trade, required fields, and successful submission. Avoid ornamental motion.
 
 ## Animation
 
-Use short, deliberate motion under 260ms with `cubic-bezier(0.23, 1, 0.32, 1)`. The hero image may fade in with a 12px upward movement; care-strip cards cascade in by 45ms; buttons use a 0.97 active scale. Disable all nonessential movement for `prefers-reduced-motion`. Avoid looping, bouncing, or decorative animation.
+Use short 160–240ms transitions with `cubic-bezier(0.23, 1, 0.32, 1)`. Hero content enters with a subtle 14px lift, project cards stagger by 50ms, and buttons press to 0.97 scale. Honor `prefers-reduced-motion`; no loops, parallax, bouncing, or glow effects.
 
 ## Typography System
 
-**Manrope** provides the accessible, contemporary sans-serif backbone for labels, navigation, and body content. **DM Serif Display** introduces restrained editorial warmth for major page statements only. H1 uses DM Serif Display at high contrast with compact line-height; H2 uses Manrope ExtraBold; body uses Manrope Regular with relaxed leading; labels use Manrope SemiBold in small uppercase tracking.
+**Barlow Condensed** is the compact, all-caps display face for high-impact headlines, section codes, and navigation labels. **DM Sans** handles body copy and information-heavy content. Use Barlow Condensed Black for H1/H2, DM Sans SemiBold for actions, and monospaced tracking for project identifiers.
 
 ## Brand Essence
 
-**MediLife Care is a modern care center for families who need clear guidance, specialist access, and confident next steps in one place.**
+**Northline Build Co. delivers complex commercial and residential construction with the clarity, craftsmanship, and site discipline owners need to move forward.**
 
-**Personality:** Reassuring, precise, human.
+**Personality:** Assured, exacting, grounded.
 
 ## Brand Voice
 
-Headlines are compassionate but decisive; calls-to-action are action-oriented and plainly useful; microcopy anticipates a patient’s next question. Avoid vague wellness language and corporate superlatives.
+Headlines are declarative and concrete. Calls to action focus on the next site decision. Microcopy should surface practical proof, scope, and sequencing — never generic promises.
 
-> “Care that meets you with clarity.”
+> “Built to hold its line.”
 
-> “Find a specialist who listens, then book a time that works.”
+> “Share the site. We’ll map the next move.”
 
 ## Wordmark & Logo
 
-The **MediLife Care** wordmark pairs a hand-drawn-feeling pulse-cross symbol with a purposeful Manrope logotype. The cross uses a rounded geometric outline, while the small pulse break reinforces active, continuous care. No default-font-only treatment is acceptable.
+The Northline mark is a bold, text-free **stacked beam symbol**: three graphite architectural bars create a rising corner, interrupted by one amber diagonal notch. It should read as a structure, direction arrow, and site boundary at once. The wordmark uses compact Barlow Condensed capitals with deliberate letter spacing.
 
 ## Signature Brand Color
 
-**MediLife Blue — `#146BCE`**: a clear, medium sapphire engineered to feel clinical, accessible, and recognizably ownable throughout links, CTAs, and care signals.
-
-## Style Decisions
-
-- **Doctor presentation:** Warm, professional clinician portraits are the default proof element. Initials appear only as small identification tags layered over portrait imagery.
-- **Inner mastheads:** Every inner page pairs its left-weighted editorial headline with a distinct care signal card, so that each context — care services, doctors, appointments, and contact — is recognizable at a glance.
-- **Brand motif:** The pulse-cross, care ribbon, and soft diagnostic frame recur meaningfully across every major page, particularly as next-step markers and operational information bands.
+**Northline Amber — `#F5A623`**: a safety-forward but refined amber that signals action, measurement points, and construction progress.
